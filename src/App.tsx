@@ -9,6 +9,7 @@ import Footer from "./components/site/Footer";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
+import Academics from "./pages/Academics";
 import Admissions from "./pages/Admissions";
 import Gallery from "./pages/Gallery";
 import Events from "./pages/Events";
@@ -31,6 +32,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/academics" element={<Academics />} />
+            <Route path="/academics/school" element={<Academics />} />
+            <Route path="/academics/college" element={<Academics />} />
+            <Route path="/academics/bse" element={<Academics />} />
+            <Route path="/academics/mba" element={<Academics />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/events" element={<Events />} />
