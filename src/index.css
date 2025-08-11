@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,90 +11,96 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Brand Colors - L.T. Dhokane Senior College */
-    --background: 0 0% 100%;
-    --foreground: 230 50% 12%;
+    --background: 36 20% 97%; /* Light Beige */
+    --foreground: 210 50% 15%; /* Deep Navy */
 
     --card: 0 0% 100%;
-    --card-foreground: 230 50% 12%;
+    --card-foreground: 210 50% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 230 50% 12%;
+    --popover-foreground: 210 50% 15%;
 
-    --primary: 220 70% 22%; /* Navy */
-    --primary-foreground: 0 0% 100%; /* On navy */
+    --primary: 210 65% 18%; /* Deep Navy Blue #0C2D48 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 24% 96%; /* Subtle surface */
-    --secondary-foreground: 230 50% 12%;
+    --secondary: 45 85% 53%; /* Academic Gold #D4AF37 */
+    --secondary-foreground: 210 50% 15%;
 
-    --muted: 220 16% 94%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 36 20% 94%; /* Light Beige */
+    --muted-foreground: 210 20% 45%;
 
-    --accent: 43 90% 55%; /* Gold */
-    --accent-foreground: 230 60% 12%;
+    --accent: 45 85% 53%; /* Academic Gold */
+    --accent-foreground: 210 50% 15%;
 
     --destructive: 0 72% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 220 60% 40%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 65% 40%;
 
     --radius: 0.75rem;
 
-    /* Sidebar */
-    --sidebar-background: 220 24% 96%;
-    --sidebar-foreground: 230 50% 12%;
-    --sidebar-primary: 220 70% 22%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 43 90% 55%;
-    --sidebar-accent-foreground: 230 60% 12%;
-    --sidebar-border: 220 15% 88%;
-    --sidebar-ring: 220 60% 40%;
+    /* Additional brand colors */
+    --navy-deep: 210 65% 18%; /* #0C2D48 */
+    --navy-muted: 210 50% 25%; /* #123C5A */
+    --gold-academic: 45 85% 53%; /* #D4AF37 */
+    --gold-dark: 45 70% 43%; /* #B5942D */
+    --beige-light: 36 20% 97%; /* #F8F5F0 */
 
-    /* Extended tokens */
-    --primary-glow: 220 85% 60%;
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.25);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.35);
+    /* Sidebar */
+    --sidebar-background: 36 20% 97%;
+    --sidebar-foreground: 210 50% 15%;
+    --sidebar-primary: 210 65% 18%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 85% 53%;
+    --sidebar-accent-foreground: 210 50% 15%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 210 65% 40%;
+
+    /* Gradients and Effects */
+    --gradient-primary: linear-gradient(135deg, hsl(210 65% 18%), hsl(45 85% 53%));
+    --shadow-elegant: 0 10px 30px -10px hsl(210 65% 18% / 0.25);
+    --shadow-gold: 0 5px 20px -5px hsl(45 85% 53% / 0.3);
   }
 
   .dark {
-    --background: 230 25% 8%;
-    --foreground: 0 0% 100%;
+    --background: 210 30% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 230 25% 10%;
-    --card-foreground: 0 0% 100%;
+    --card: 210 30% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 230 25% 10%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 210 30% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 220 65% 30%; /* Navy, slightly lighter for contrast */
+    --primary: 210 65% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 20% 16%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 45 85% 53%;
+    --secondary-foreground: 210 50% 15%;
 
-    --muted: 220 18% 18%;
-    --muted-foreground: 220 12% 70%;
+    --muted: 210 25% 15%;
+    --muted-foreground: 210 15% 65%;
 
-    --accent: 43 90% 55%; /* Gold */
-    --accent-foreground: 230 60% 12%;
+    --accent: 45 85% 53%;
+    --accent-foreground: 210 50% 15%;
 
     --destructive: 0 62% 40%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 18% 22%;
-    --input: 220 18% 22%;
-    --ring: 220 65% 50%;
+    --border: 210 25% 22%;
+    --input: 210 25% 22%;
+    --ring: 210 65% 50%;
 
-    --sidebar-background: 230 24% 10%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 220 65% 30%;
+    --sidebar-background: 210 30% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 210 65% 25%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 43 90% 55%;
-    --sidebar-accent-foreground: 230 60% 12%;
-    --sidebar-border: 230 16% 18%;
-    --sidebar-ring: 220 65% 50%;
+    --sidebar-accent: 45 85% 53%;
+    --sidebar-accent-foreground: 210 50% 15%;
+    --sidebar-border: 210 25% 22%;
+    --sidebar-ring: 210 65% 50%;
   }
 }
 
@@ -102,6 +110,260 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Merriweather', Georgia, serif;
+  }
+  
+  .font-body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .text-navy {
+    color: hsl(var(--navy-deep));
+  }
+
+  .text-gold {
+    color: hsl(var(--gold-academic));
+  }
+
+  .bg-navy {
+    background-color: hsl(var(--navy-deep));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold-academic));
+  }
+
+  .bg-beige {
+    background-color: hsl(var(--beige-light));
+  }
+
+  /* Enhanced Button Styles */
+  .btn-primary {
+    @apply bg-college-navy text-white hover:bg-college-navy/90 
+           transition-all duration-300 ease-in-out transform hover:scale-105 
+           hover:shadow-lg active:scale-95 focus:ring-2 focus:ring-college-navy/50;
+  }
+
+  .btn-secondary {
+    @apply bg-college-gold text-white hover:bg-college-gold/90 
+           transition-all duration-300 ease-in-out transform hover:scale-105 
+           hover:shadow-lg active:scale-95 focus:ring-2 focus:ring-college-gold/50;
+  }
+
+  .btn-outline-primary {
+    @apply border-college-navy text-college-navy hover:bg-college-navy hover:text-white 
+           transition-all duration-300 ease-in-out transform hover:scale-105 
+           hover:shadow-lg active:scale-95 focus:ring-2 focus:ring-college-navy/30;
+  }
+
+  .btn-outline-secondary {
+    @apply border-college-gold text-college-gold hover:bg-college-gold hover:text-white 
+           transition-all duration-300 ease-in-out transform hover:scale-105 
+           hover:shadow-lg active:scale-95 focus:ring-2 focus:ring-college-gold/30;
+  }
+
+  .btn-ghost {
+    @apply text-college-navy hover:text-college-gold hover:bg-college-gold/10 
+           transition-all duration-300 ease-in-out transform hover:scale-105 
+           active:scale-95 focus:ring-2 focus:ring-college-gold/30;
+  }
+
+  .btn-minimal {
+    @apply text-sm px-3 py-1.5 rounded-md font-medium 
+           transition-all duration-200 ease-in-out 
+           hover:shadow-sm active:scale-95;
+  }
+
+  /* Icon on colored backgrounds */
+  .icon-on-gold {
+    @apply text-white;
+  }
+
+  .icon-on-navy {
+    @apply text-white;
+  }
+
+  /* Animation effects */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-pulse-subtle {
+    animation: pulse-subtle 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes button-bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .hover-bounce:hover {
+    animation: button-bounce 0.3s ease-in-out;
+  }
+}
+
+@layer components {
+  /* Academic Button Styles with exact color palette */
+  .btn-academic-primary {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium 
+           transition-all duration-300 ease-out focus-visible:outline-none 
+           focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+           disabled:pointer-events-none disabled:opacity-50
+           px-6 py-3 text-white border
+           hover:-translate-y-0.5;
+    background-color: #0C2D48;
+    border-color: #0C2D48;
+  }
+  
+  .btn-academic-primary:hover {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .btn-academic-secondary {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium 
+           transition-all duration-300 ease-out focus-visible:outline-none 
+           focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+           disabled:pointer-events-none disabled:opacity-50
+           px-6 py-3 text-white border
+           hover:-translate-y-0.5;
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+  }
+  
+  .btn-academic-secondary:hover {
+    background-color: #B5942D;
+    border-color: #B5942D;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .btn-academic-outline {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium 
+           transition-all duration-300 ease-out focus-visible:outline-none 
+           focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+           disabled:pointer-events-none disabled:opacity-50
+           px-6 py-3 bg-transparent border
+           hover:-translate-y-0.5;
+    color: #0C2D48;
+    border-color: #0C2D48;
+  }
+  
+  .btn-academic-outline:hover {
+    background-color: #D4AF37;
+    color: white;
+    border-color: #D4AF37;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Academic Link Styles */
+  .link-academic {
+    @apply relative transition-colors duration-300 ease-out;
+    color: #0C2D48;
+  }
+  
+  .link-academic:hover {
+    color: #D4AF37;
+  }
+  
+  .link-academic::after {
+    @apply absolute bottom-0 left-0 transition-all duration-300 ease-out;
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #D4AF37;
+  }
+  
+  .link-academic:hover::after {
+    width: 100%;
+  }
+
+  /* Academic Card Styles */
+  .card-academic {
+    @apply bg-white rounded-lg border border-gray-200 transition-all duration-300 ease-out;
+    box-shadow: 0 10px 25px -3px rgba(12, 45, 72, 0.1), 0 4px 6px -2px rgba(12, 45, 72, 0.05);
+  }
+  
+  .card-academic:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(12, 45, 72, 0.1), 0 10px 10px -5px rgba(12, 45, 72, 0.04);
+  }
+  
+  .card-academic-featured {
+    @apply bg-white rounded-lg border-2 transition-all duration-300 ease-out;
+    border-color: #D4AF37;
+    box-shadow: 0 10px 25px -3px rgba(212, 175, 55, 0.2), 0 4px 6px -2px rgba(212, 175, 55, 0.1);
+  }
+  
+  .card-academic-featured:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+  }
+
+  /* Image Hover Effects */
+  .img-academic-hover {
+    @apply transition-transform duration-500 ease-out;
+  }
+  
+  .img-academic-hover:hover {
+    transform: scale(1.1);
+  }
+  
+  .img-gallery-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .img-gallery-hover:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+  /* Section Animation Classes */
+  .section-fade-in {
+    @apply opacity-0 translate-y-10;
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+  
+  .section-fade-in-delay-1 {
+    @apply opacity-0 translate-y-10;
+    animation: fade-in-up 0.8s ease-out 0.2s forwards;
+  }
+  
+  .section-fade-in-delay-2 {
+    @apply opacity-0 translate-y-10;
+    animation: fade-in-up 0.8s ease-out 0.4s forwards;
+  }
+  
+  .section-fade-in-delay-3 {
+    @apply opacity-0 translate-y-10;
+    animation: fade-in-up 0.8s ease-out 0.6s forwards;
   }
 }
